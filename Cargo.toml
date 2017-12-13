@@ -1,0 +1,7 @@
+[package]
+name = "rangetype"
+version = "0.1.0"
+authors = ["teaearlgraycold <supacoofoo@gmail.com>"]
+
+[dependencies]
+static_assertions = "0.2.5"
