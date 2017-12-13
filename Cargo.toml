@@ -3,6 +3,7 @@ name = "rangetype"
 version = "0.1.0"
 authors = ["teaearlgraycold <supacoofoo@gmail.com>"]
 license = "MIT"
+documentation = "https://docs.rs/rangetype/"
 homepage = "https://github.com/teaearlgraycold/rangetype"
 repository = "https://github.com/teaearlgraycold/rangetype"
 description = "An Ada-inspired Range type for Rust."

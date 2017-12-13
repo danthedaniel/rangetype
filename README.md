@@ -1,6 +1,8 @@
 Rust RangeType
 ===
 
+![Crates.io Badge](https://img.shields.io/crates/v/rangetype.svg)
+
 An Ada-inspired Range type for Rust.
 
 ### Features
