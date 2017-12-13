@@ -18,9 +18,11 @@ The following will fail to compile:
 ```rust
 #[macro_use]
 extern crate rangetype;
+#[macro_use]
+extern crate static_assertions;
 
 fn main() {
-    // Range with a value of 5 that should be within in range [-5, 2]
+    // A value of 5 that should be within the range [-5, 2]
     let x = range!(5, -5..2);
 }
 ```
@@ -28,14 +30,14 @@ fn main() {
 **Run-time checks**
 
 ```rust
-// Will panic since the two numbers are for different ranges
+// Will panic since the two numbers have different ranges
 let x = range!(5, 0..10);
 let y = range!(10, 10..128);
 let z = x + y; // panic!
 ```
 
 ```rust
-// Will panic because 5 + 10 = 15 which will overflow the range of 0..10
+// Will panic because 5 + 10 = 15 which will overflow the range of [0, 10]
 let x = range!(5, 0..10);
 let y = range!(10, 0..10);
 let z = x + y; // panic!
