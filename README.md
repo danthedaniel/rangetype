@@ -5,6 +5,10 @@ Rust RangeType
 
 An Ada-inspired Range type for Rust.
 
+### Documentation
+
+[Here](https://docs.rs/rangetype/).
+
 ### Features
 
 **Compile-time checks**
@@ -27,14 +31,12 @@ fn main() {
 // Will panic since the two numbers are for different ranges
 let x = range!(5, 0..10);
 let y = range!(10, 10..128);
-
-x + y // panic!
+let z = x + y; // panic!
 ```
 
 ```rust
 // Will panic because 5 + 10 = 15 which will overflow the range of 0..10
 let x = range!(5, 0..10);
 let y = range!(10, 0..10);
-
 let z = x + y; // panic!
 ```
